@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="navbar max-w-screen-xl mx-auto px-4">
         {/* Left - Logo */}
         <div className="navbar-start">
-          <a className="btn btn-ghost text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <a className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent cursor-pointer">
             ReTailUI
           </a>
         </div>
