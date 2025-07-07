@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.route("/add").post(addComponent);
 
-router.route("/delete").post(deleteComponent);
+router.route("/delete").delete(deleteComponent);
 
 export default router;
