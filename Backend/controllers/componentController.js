@@ -30,3 +30,32 @@ export const addComponent = async (req, res) => {
     console.log(error);
   }
 };
+
+export const deleteComponent = async (req, res) => {
+  try {
+    const { id } = req.body;
+
+    if (!id) {
+      return res.status(400).json({
+        success: false,
+        message: "ID Required",
+      });
+    }
+
+    const component = Component.findByIdAndDelete(id);
+
+    if (!component) {
+      return res.status(400).json({
+        success: false,
+        message: "Component does not exits",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Component Deleted",
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
