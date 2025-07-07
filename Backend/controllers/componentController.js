@@ -42,7 +42,7 @@ export const deleteComponent = async (req, res) => {
       });
     }
 
-    const component = Component.findByIdAndDelete(id);
+    const component = await Component.findByIdAndDelete(id);
 
     if (!component) {
       return res.status(400).json({
